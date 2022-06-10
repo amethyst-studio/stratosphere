@@ -10,6 +10,7 @@ export class User {
       const entries = csv.split(':');
       if (parseInt(entries[2]!) < 1000 || parseInt(entries[3]!) < 1000) continue;
       if (parseInt(entries[2]!) === 65534 || parseInt(entries[3]!) === 65534) continue;
+      if (csv.trim() === '') continue;
       for (const user of users) {
         if (entries[0] === user.id) {
           update.push(user.id);
