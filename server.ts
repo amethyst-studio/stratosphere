@@ -10,8 +10,8 @@ import { SQLite } from './lib/database/sqlite.ts';
 /**
  * Initialize the StratoSphere Service.
  */
-// deno-lint-ignore require-await
 export async function main(): Promise<void> {
+  await Deno.mkdirSync('./store/local/', { recursive: true });
   SQLite.initialize();
 
   const server = new drash.Server({
