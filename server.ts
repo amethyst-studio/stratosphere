@@ -26,6 +26,8 @@ export async function main(): Promise<void> {
   server.addResource(PollSyncResource);
 
   server.run();
+  Logging.info(`Registration UUID: ${configuration.cluster.id}`);
+  Logging.info(`Registration Secret: ${configuration.cluster.secret}`);
 }
 
 // Launch the Server.
