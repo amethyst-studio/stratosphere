@@ -12,7 +12,9 @@ export class User {
       for (const user of users) {
         if (entries[0] === user.id) {
           update.push(user.id);
+          continue;
         }
+        console.info('deactivate:', entries[0]);
       }
     }
 
