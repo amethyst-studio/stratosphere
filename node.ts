@@ -10,7 +10,7 @@ class MainCommand extends line.MainCommand {
   public override subcommands = [
     RegisterCommand,
     PollCommand,
-  ]
+  ];
 }
 
 const cli = new line.CLI({
