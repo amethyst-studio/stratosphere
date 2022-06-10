@@ -15,6 +15,7 @@ export class User {
           update.push(user.id);
           continue;
         }
+        console.info('"', csv, '"');
         console.info('deactivate:', entries[0], entries);
       }
     }
