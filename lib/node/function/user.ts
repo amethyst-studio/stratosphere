@@ -19,9 +19,11 @@ export class User {
     for (const user of users) {
       if (update.includes(user.id)) {
         // Update the User.
+        console.info('sync:', user)
       }
       else {
         // Create the User.
+        console.info('create:', user);
       }
     }
   }
